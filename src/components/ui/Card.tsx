@@ -21,7 +21,7 @@ export default function Card({
     lg: "p-8",
   };
 
-  const baseClasses = `bg-white rounded-xl border border-gray-200 ${paddingClasses[padding]} ${className}`;
+  const baseClasses = `bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 ${paddingClasses[padding]} ${className}`;
 
   const cardVariants = {
     initial: { y: 20, opacity: 0 },

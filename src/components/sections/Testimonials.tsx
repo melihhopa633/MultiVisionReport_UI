@@ -83,10 +83,10 @@ export default function Testimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">
             Müşteri <span className="text-gradient">Referansları</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Türkiye'nin önde gelen sağlık kurumları MultiVision Report ile
             verimliliğini artırdı
           </p>
@@ -114,10 +114,12 @@ export default function Testimonials() {
             >
               <Card className="p-6 hover:shadow-soft transition-shadow duration-300">
                 <Icon className="text-primary-600 mx-auto mb-3" size={32} />
-                <div className="text-3xl font-bold text-gray-900 mb-1">
+                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium">
+                  {stat.label}
+                </div>
               </Card>
             </motion.div>
           );
@@ -153,7 +155,7 @@ export default function Testimonials() {
               </div>
 
               {/* Testimonial Text */}
-              <blockquote className="text-gray-700 mb-6 leading-relaxed italic">
+              <blockquote className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed italic">
                 "{testimonial.text}"
               </blockquote>
 
@@ -165,10 +167,12 @@ export default function Testimonials() {
                 </div>
 
                 <div className="flex-1">
-                  <h4 className="font-semibold text-gray-900">
+                  <h4 className="font-semibold text-gray-900 dark:text-white">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm text-gray-600">{testimonial.title}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {testimonial.title}
+                  </p>
                   <p className="text-xs text-primary-600 font-medium">
                     {testimonial.company}
                   </p>
@@ -194,11 +198,11 @@ export default function Testimonials() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-center mt-16"
       >
-        <Card className="bg-gradient-to-r from-primary-50 to-white p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
+        <Card className="bg-gradient-to-r from-primary-50 to-white dark:from-gray-800 dark:to-gray-700 p-8 md:p-12">
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white mb-4">
             Siz de Başarı Hikayemize Katılın
           </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Türkiye'nin önde gelen sağlık kurumları gibi siz de MultiVision
             Report ile verimliliğinizi artırın
           </p>

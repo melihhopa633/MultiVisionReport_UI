@@ -71,10 +71,10 @@ export default function Modules() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">
             Özelleşmiş <span className="text-gradient">Modüller</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Her uzmanlık alanı için özel olarak tasarlanmış modüllerle maksimum
             verimlilik ve doğruluk
           </p>
@@ -109,16 +109,16 @@ export default function Modules() {
                         <Icon size={32} className="text-white" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-display font-bold text-gray-900">
+                        <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white">
                           {module.title}
                         </h3>
-                        <p className="text-gray-600 font-medium">
+                        <p className="text-gray-600 dark:text-gray-400 font-medium">
                           {module.subtitle}
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                       {module.description}
                     </p>
 
@@ -139,7 +139,9 @@ export default function Modules() {
                             size={20}
                             className="text-green-500 flex-shrink-0"
                           />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700 dark:text-gray-300">
+                            {feature}
+                          </span>
                         </motion.div>
                       ))}
                     </div>
@@ -195,11 +197,11 @@ export default function Modules() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="mt-16 text-center"
       >
-        <Card className="bg-gradient-to-r from-gray-50 to-white p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
+        <Card className="bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-700 p-8 md:p-12">
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white mb-4">
             Ortak Özellikler
           </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             Tüm modüller ortak altyapı ve özellikleri paylaşarak tutarlı,
             güvenli ve entegre bir deneyim sunar
           </p>
@@ -209,25 +211,29 @@ export default function Modules() {
               <div className="text-2xl font-bold text-primary-600 mb-2">
                 PACS/HIS
               </div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
                 Mevcut sistemlerle sorunsuz entegrasyon
               </p>
             </div>
             <div className="p-4">
               <div className="text-2xl font-bold text-green-600 mb-2">KVKK</div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
                 Hasta verilerinde güvenlik
               </p>
             </div>
             <div className="p-4">
               <div className="text-2xl font-bold text-blue-600 mb-2">3 Dil</div>
-              <p className="text-sm text-gray-600">TR, EN, Latin terminoloji</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                TR, EN, Latin terminoloji
+              </p>
             </div>
             <div className="p-4">
               <div className="text-2xl font-bold text-purple-600 mb-2">
                 Esnek
               </div>
-              <p className="text-sm text-gray-600">Bulut veya lokal kurulum</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Bulut veya lokal kurulum
+              </p>
             </div>
           </div>
         </Card>

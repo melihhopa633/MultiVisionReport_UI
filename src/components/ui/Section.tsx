@@ -16,9 +16,10 @@ export default function Section({
   padding = "lg",
 }: SectionProps) {
   const backgroundClasses = {
-    white: "bg-white",
-    gray: "bg-gray-50",
-    gradient: "bg-gradient-to-br from-primary-50 to-white",
+    white: "bg-white dark:bg-gray-900",
+    gray: "bg-gray-50 dark:bg-gray-800",
+    gradient:
+      "bg-gradient-to-br from-primary-50 to-white dark:from-gray-800 dark:to-gray-900",
   };
 
   const paddingClasses = {

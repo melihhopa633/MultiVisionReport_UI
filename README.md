@@ -11,6 +11,8 @@ MultiVision Report, yapay zeka destekli tıbbi görüntüleme raporlama platform
 - **SEO Optimizasyonu**: react-helmet-async ile meta tag yönetimi
 - **Tailwind CSS**: Hızlı ve tutarlı stil geliştirme
 - **TypeScript**: Tip güvenliği ve geliştirici deneyimi
+- **Dark/Light Mode**: Sistem tercihi ile otomatik ve manuel tema değişimi
+- **Theme Persistence**: LocalStorage ile tema tercihini hatırlama
 
 ## 📋 Gereksinimler
 
@@ -81,6 +83,14 @@ src/
 - Maksimum genişlik: 1200px
 - Responsive breakpoint'ler
 
+### Tema Sistemi
+
+- **Light Mode**: Açık tema (varsayılan)
+- **Dark Mode**: Koyu tema
+- **Otomatik Algılama**: Sistem teması tercihi ile başlatma
+- **Manuel Değişim**: Header'daki toggle butonu ile tema değişimi
+- **Persistence**: Kullanıcı tercihini localStorage'da saklama
+
 ## 📱 Responsive Tasarım
 
 - **Mobile**: 320px - 767px
@@ -150,12 +160,22 @@ Bu proje YAKAZA Bilişim tarafından geliştirilmiştir. Tüm hakları saklıdı
 
 ## 📈 Versiyon Geçmişi
 
+- **v1.1.0** - Dark Mode Güncellemesi
+
+  - Dark/Light tema değişimi eklendi
+  - Theme toggle button (Header'da)
+  - Sistem teması otomatik algılama
+  - LocalStorage ile tema persistence
+  - Tüm bileşenlerde dark mode desteği
+
 - **v1.0.0** - İlk sürüm
   - Hero section
   - Features section
   - Modules section
   - How it works section
   - Benefits section
+  - Screenshots section
+  - Testimonials section
   - Contact form
   - Responsive tasarım
   - SEO optimizasyonu

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Button from "../ui/Button";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const navigation = [
   { name: "Özellikler", href: "#features" },
@@ -17,7 +18,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
       <nav className="section-container flex items-center justify-between py-4">
         {/* Logo */}
         <motion.div
@@ -29,10 +30,12 @@ export default function Header() {
             <span className="text-white font-bold text-lg">MV</span>
           </div>
           <div>
-            <div className="font-display font-bold text-xl text-gray-900">
+            <div className="font-display font-bold text-xl text-gray-900 dark:text-white">
               MultiVision
             </div>
-            <div className="text-xs text-gray-600 -mt-1">Report</div>
+            <div className="text-xs text-gray-600 dark:text-gray-400 -mt-1">
+              Report
+            </div>
           </div>
         </motion.div>
 
@@ -45,19 +48,20 @@ export default function Header() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200"
             >
               {item.name}
             </motion.a>
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Button & Theme Toggle */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="hidden md:block"
+          className="hidden md:flex items-center space-x-4"
         >
+          <ThemeToggle />
           <Button
             onClick={() =>
               document
@@ -69,13 +73,16 @@ export default function Header() {
           </Button>
         </motion.div>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile menu button & Theme Toggle */}
+        <div className="md:hidden flex items-center space-x-2">
+          <ThemeToggle />
+          <button
+            className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
@@ -84,14 +91,14 @@ export default function Header() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-white border-t border-gray-100"
+          className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800"
         >
           <div className="section-container py-4 space-y-4">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

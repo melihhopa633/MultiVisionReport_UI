@@ -45,7 +45,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight"
           >
-            <span className="text-gray-900">Tıbbi Raporlamada</span>
+            <span className="text-gray-900 dark:text-white">
+              Tıbbi Raporlamada
+            </span>
             <br />
             <span className="text-gradient">Devrim Yaratın</span>
           </motion.h1>
@@ -55,7 +57,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
             <strong>MultiVision Report</strong> ile konuşmanızı gerçek zamanlı
             olarak yapılandırılmış tıbbi raporlara dönüştürün. Radyoloji,
@@ -71,7 +73,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-6 mb-12 text-gray-700"
+            className="flex flex-wrap items-center justify-center gap-6 mb-12 text-gray-700 dark:text-gray-300"
           >
             <div className="flex items-center space-x-2">
               <Brain className="text-primary-600" size={20} />
@@ -109,31 +111,39 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-medical"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 shadow-medical"
           >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
                 %90+
               </div>
-              <div className="text-gray-600 font-medium">Zaman Tasarrufu</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                Zaman Tasarrufu
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-medical-green mb-2">
                 %95+
               </div>
-              <div className="text-gray-600 font-medium">Doğruluk Oranı</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                Doğruluk Oranı
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-medical-blue mb-2">
                 3
               </div>
-              <div className="text-gray-600 font-medium">Ana Modül</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                Ana Modül
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
                 24/7
               </div>
-              <div className="text-gray-600 font-medium">Destek</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                Destek
+              </div>
             </div>
           </motion.div>
         </div>

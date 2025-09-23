@@ -103,10 +103,10 @@ export default function Benefits() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">
             Ölçülebilir <span className="text-gradient">Faydalar</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             MultiVision Report ile elde edeceğiniz somut faydalar ve performans
             iyileştirmeleri
           </p>
@@ -138,11 +138,13 @@ export default function Benefits() {
                   {benefit.metric}
                 </div>
 
-                <h3 className="text-xl font-display font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-display font-semibold text-gray-900 dark:text-white mb-4">
                   {benefit.title}
                 </h3>
 
-                <p className="text-gray-600 mb-4">{benefit.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {benefit.description}
+                </p>
 
                 <div
                   className={`inline-block px-3 py-1 rounded-full ${benefit.bgColor} ${benefit.color} text-sm font-medium`}
@@ -163,7 +165,7 @@ export default function Benefits() {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mb-16"
       >
-        <h3 className="text-2xl md:text-3xl font-display font-bold text-center text-gray-900 mb-12">
+        <h3 className="text-2xl md:text-3xl font-display font-bold text-center text-gray-900 dark:text-white mb-12">
           Ek Faydalar
         </h3>
 
@@ -185,10 +187,12 @@ export default function Benefits() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                       {benefit.title}
                     </h4>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {benefit.description}
+                    </p>
                   </div>
                 </Card>
               </motion.div>

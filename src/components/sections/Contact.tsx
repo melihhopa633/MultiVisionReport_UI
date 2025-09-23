@@ -69,10 +69,10 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">
             Hemen <span className="text-gradient">Başlayın</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             MultiVision Report ile tıbbi raporlamanızı dönüştürün.
             Uzmanlarımızdan ücretsiz demo ve detaylı bilgi alın.
           </p>
@@ -88,7 +88,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <Card className="p-8">
-            <h3 className="text-2xl font-display font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white mb-6">
               Demo Talep Formu
             </h3>
 
@@ -113,13 +113,13 @@ export default function Contact() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Ad Soyad *
                   </label>
                   <input
                     {...register("name")}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                     placeholder="Ad Soyad"
                   />
                   {errors.name && (
@@ -131,13 +131,13 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     E-posta *
                   </label>
                   <input
                     {...register("email")}
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                     placeholder="ornek@email.com"
                   />
                   {errors.email && (
@@ -151,13 +151,13 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Telefon *
                   </label>
                   <input
                     {...register("phone")}
                     type="tel"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                     placeholder="0555 123 45 67"
                   />
                   {errors.phone && (
@@ -169,13 +169,13 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Kurum/Hastane *
                   </label>
                   <input
                     {...register("company")}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                     placeholder="Kurum Adı"
                   />
                   {errors.company && (
@@ -218,7 +218,7 @@ export default function Contact() {
                 <textarea
                   {...register("message")}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none"
                   placeholder="Lütfen ihtiyaçlarınızı ve demo için özel gereksinimlerinizi belirtiniz..."
                 />
                 {errors.message && (
@@ -236,7 +236,7 @@ export default function Contact() {
                     type="checkbox"
                     className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
                   />
-                  <span className="text-sm text-gray-700">
+                  <span className="text-sm text-gray-700 dark:text-gray-300">
                     Canlı demo seansı talep ediyorum
                   </span>
                 </label>
@@ -247,7 +247,7 @@ export default function Contact() {
                     type="checkbox"
                     className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
                   />
-                  <span className="text-sm text-gray-700">
+                  <span className="text-sm text-gray-700 dark:text-gray-300">
                     Ürün güncellemeleri ve sektör haberlerini e-posta ile almak
                     istiyorum
                   </span>
@@ -277,7 +277,7 @@ export default function Contact() {
         >
           {/* Company Info */}
           <Card className="p-8">
-            <h3 className="text-2xl font-display font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white mb-6">
               İletişim Bilgileri
             </h3>
 
@@ -287,7 +287,9 @@ export default function Contact() {
                   <MapPin className="text-primary-600" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Adres</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    Adres
+                  </h4>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Üniversiteler Mah. 1606. Cd.
                     <br />
@@ -305,8 +307,12 @@ export default function Contact() {
                   <Phone className="text-green-600" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Telefon</h4>
-                  <p className="text-gray-600">0-312-295-6485</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    Telefon
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    0-312-295-6485
+                  </p>
                 </div>
               </div>
 
@@ -315,33 +321,39 @@ export default function Contact() {
                   <Mail className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">E-posta</h4>
-                  <p className="text-gray-600">multivision@yakaza.com.tr</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    E-posta
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    multivision@yakaza.com.tr
+                  </p>
                 </div>
               </div>
             </div>
           </Card>
 
           {/* Quick Stats */}
-          <Card className="p-8 bg-gradient-to-br from-primary-50 to-white">
-            <h3 className="text-xl font-display font-bold text-gray-900 mb-6">
+          <Card className="p-8 bg-gradient-to-br from-primary-50 to-white dark:from-gray-800 dark:to-gray-700">
+            <h3 className="text-xl font-display font-bold text-gray-900 dark:text-white mb-6">
               Neden MultiVision?
             </h3>
 
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Clock className="text-primary-600" size={20} />
-                <span className="text-gray-700">
+                <span className="text-gray-700 dark:text-gray-300">
                   24 saat içinde demo randevusu
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Users className="text-green-600" size={20} />
-                <span className="text-gray-700">Uzman teknik ekip desteği</span>
+                <span className="text-gray-700 dark:text-gray-300">
+                  Uzman teknik ekip desteği
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="text-blue-600" size={20} />
-                <span className="text-gray-700">
+                <span className="text-gray-700 dark:text-gray-300">
                   KVKK uyumlu güvenli sistem
                 </span>
               </div>
@@ -349,8 +361,8 @@ export default function Contact() {
           </Card>
 
           {/* Company */}
-          <Card className="p-8 text-center bg-gray-900 text-white">
-            <h3 className="text-xl font-display font-bold mb-4">
+          <Card className="p-8 text-center bg-gray-900 dark:bg-black text-white">
+            <h3 className="text-xl font-display font-bold text-white mb-4">
               YAKAZA Bilişim Çözümleri
             </h3>
             <p className="text-gray-300 text-sm mb-4">Danışmanlık Ltd. Şti.</p>

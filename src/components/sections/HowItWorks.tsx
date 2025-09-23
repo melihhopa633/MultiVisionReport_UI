@@ -66,10 +66,10 @@ export default function HowItWorks() {
             <Play size={16} className="mr-2" />
             Nasıl Çalışır?
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">
             Sadece <span className="text-gradient">3 Adım</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             MultiVision Report ile tıbbi raporlamada devrim yaşayın. Basit,
             hızlı ve güvenilir süreç.
           </p>
@@ -111,7 +111,7 @@ export default function HowItWorks() {
                       <div className="absolute -inset-1 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
                     </div>
                     <div>
-                      <h3 className="text-3xl font-display font-bold text-gray-900">
+                      <h3 className="text-3xl font-display font-bold text-gray-900 dark:text-white">
                         {step.title}
                       </h3>
                       <p className="text-lg text-primary-600 font-medium">
@@ -120,7 +120,7 @@ export default function HowItWorks() {
                     </div>
                   </div>
 
-                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                     {step.description}
                   </p>
 
@@ -140,7 +140,9 @@ export default function HowItWorks() {
                         <div
                           className={`w-2 h-2 rounded-full bg-gradient-to-r ${step.color}`}
                         ></div>
-                        <span className="text-gray-700">{detail}</span>
+                        <span className="text-gray-700 dark:text-gray-300">
+                          {detail}
+                        </span>
                       </motion.div>
                     ))}
                   </div>
@@ -163,14 +165,14 @@ export default function HowItWorks() {
                     </div>
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-4">
-                        <h4 className="font-semibold text-gray-900">
+                        <h4 className="font-semibold text-gray-900 dark:text-white">
                           {step.title}
                         </h4>
                         <span className="text-sm text-gray-500">
                           Adım {step.number}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                         {step.subtitle}
                       </p>
                     </div>
@@ -190,11 +192,11 @@ export default function HowItWorks() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-center mt-20"
       >
-        <Card className="bg-white/80 backdrop-blur-sm p-8 md:p-12 border-2 border-white/50">
-          <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
+        <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 md:p-12 border-2 border-white/50 dark:border-gray-700/50">
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white mb-4">
             Canlı Demo ile Deneyimleyin
           </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             MultiVision Report'un tüm özelliklerini canlı demo ile test edin.
             Uzmanlarımız size özel bir sunum hazırlayarak, sistemi detaylıca
             gösterecek.

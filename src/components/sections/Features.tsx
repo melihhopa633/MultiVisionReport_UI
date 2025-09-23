@@ -89,10 +89,10 @@ export default function Features() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">
             Güçlü <span className="text-gradient">Özellikler</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             MultiVision Report, tıbbi görüntüleme raporlamasını
             devrimselleştiren çok sayıda gelişmiş özellik sunar
           </p>
@@ -117,10 +117,10 @@ export default function Features() {
                   >
                     <Icon size={32} className={feature.color} />
                   </div>
-                  <h3 className="text-xl font-display font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl font-display font-semibold text-gray-900 dark:text-white mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function Features() {
         className="text-center mt-16"
       >
         <div className="bg-gradient-to-r from-primary-600 to-medical-blue rounded-2xl p-8 md:p-12 text-white">
-          <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
             Özellikleri Yakından İnceleyin
           </h3>
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">

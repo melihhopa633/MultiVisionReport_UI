@@ -66,10 +66,10 @@ export default function Screenshots() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">
             Ekran <span className="text-gradient">Görüntüleri</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             MultiVision Report'un kullanıcı dostu arayüzü ve güçlü özelliklerini
             keşfedin
           </p>
@@ -95,10 +95,12 @@ export default function Screenshots() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/90 transition-all duration-200"
+              className="flex items-center space-x-2 px-6 py-3 bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-lg border border-white/20 dark:border-gray-600/20 hover:bg-white/90 dark:hover:bg-gray-600/90 transition-all duration-200"
             >
               <Icon size={20} className="text-primary-600" />
-              <span className="font-medium text-gray-900">{category.name}</span>
+              <span className="font-medium text-gray-900 dark:text-white">
+                {category.name}
+              </span>
               <span className="bg-primary-100 text-primary-600 text-xs px-2 py-1 rounded-full">
                 {category.count}
               </span>
@@ -142,10 +144,10 @@ export default function Screenshots() {
               </div>
 
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {screenshot.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {screenshot.description}
                 </p>
               </div>
@@ -162,11 +164,11 @@ export default function Screenshots() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-center mt-16"
       >
-        <Card className="bg-white/80 backdrop-blur-sm p-8 md:p-12 border-2 border-white/50">
-          <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
+        <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 md:p-12 border-2 border-white/50 dark:border-gray-700/50">
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white mb-4">
             Canlı Demo İle Tüm Özellikleri Keşfedin
           </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Ekran görüntüleri sadece başlangıç! Gerçek deneyimi yaşamak için
             canlı demo talebinde bulunun.
           </p>
